@@ -105,7 +105,7 @@ export default function About() {
           <div
             id="collapseThree"
             className="accordion-collapse collapse"
-            data-bs-parent="#accordionExample"
+            data-bs-parent="#accordionExample" 
           >
             <div className="accordion-body" style={myStyle}>
               <strong>This is the third item's accordion body.</strong> It is

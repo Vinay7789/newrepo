@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Techform from "./components/Techform";
 import About from "./components/About";
 import React, { useState } from "react";
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+// import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
   const [mode, setMode] = useState("light"); //whether dark mode is enabled or not
   const [alert, setAlert] = useState(null);
@@ -31,7 +31,9 @@ function App() {
 
   return (
     <>
-    <BrowserRouter>
+     <Navbar title="Navbar" aboutText="About" mode={mode} toggleMode={toggleMode} />
+     <Alert alert = {alert}/>  
+    {/* <BrowserRouter>
     
     <Navbar title="Navbar" aboutText="About" mode={mode} toggleMode={toggleMode} />
       <Alert alert = {alert}/>  
@@ -41,8 +43,8 @@ function App() {
           <Route path="/" element={<Techform heading="Enter the text to analyze below" onShowAlert={showAlert}/>} />
         </Routes>
       </div>
-   </BrowserRouter> 
-      {/* <Techform showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/> */}
+   </BrowserRouter>  */}
+      <Techform showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>
       {/* //<About alert={alert}/> */}
     </>
   );
