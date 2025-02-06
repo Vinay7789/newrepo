@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/newrepo/tree/master/static/css/main.f855e6bc.css",
+    "main.js": "/newrepo/tree/master/static/js/main.05fa787f.js",
+    "index.html": "/newrepo/tree/master/index.html",
+    "main.f855e6bc.css.map": "/newrepo/tree/master/static/css/main.f855e6bc.css.map",
+    "main.05fa787f.js.map": "/newrepo/tree/master/static/js/main.05fa787f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f855e6bc.css",
+    "static/js/main.05fa787f.js"
+  ]
+}
