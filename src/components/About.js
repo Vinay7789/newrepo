@@ -1,30 +1,33 @@
 import React, { useState } from "react";
 
-export default function About() {
-  const [myStyle, setmyStyle] = useState({
-    color: "black",
-    backgroundColor: "white",
-  });
-  const [myBtn, setmybtn] = useState("Enable Dark mode");
-  const ToggleStyle = () => {
-    if (myStyle.color === "white") {
-      setmyStyle({
-        color: "black",
-        backgroundColor: "white",
-      });
-      setmybtn("Enable Dark mode");
-    } else {
-      setmyStyle({
-        color: "white",
-        backgroundColor: "black",
-      });
-      setmybtn("Enable Light mode");
-    }
-  };
-
+export default function About(props) {
+  // const [myStyle, setmyStyle] = useState({
+  //   color: "black",
+  //   backgroundColor: "white",
+  // });
+  // const [myBtn, setmybtn] = useState("Enable Dark mode");
+  // const ToggleStyle = () => {
+  //   if (myStyle.color === "white") {
+  //     setmyStyle({
+  //       color: "black",
+  //       backgroundColor: "white",
+  //     });
+  //     setmybtn("Enable Dark mode");
+  //   } else {
+  //     setmyStyle({
+  //       color: "white",
+  //       backgroundColor: "black",
+  //     });
+  //     setmybtn("Enable Light mode");
+  //   }
+  // };
+let myStyle={
+  color: props.mode==='dark'?'white':'#042743',
+  backgroundColor:props.mode==='dark'?'rgb(36 74 104)': 'white'
+}
   return (
-    <div className="container" style={myStyle}>
-      <h1 className="my-3">About us</h1>
+    <div className="container">
+      <h1 className="my-3" style={{color: props.mode==='dark'?'white':'#042743'}}>About us</h1>
       <div className="accordion" id="accordionExample">
         <div className="accordion-item">
           <h2 className="accordion-header">
@@ -37,7 +40,7 @@ export default function About() {
               aria-expanded="true"
               aria-controls="collapseOne"
             >
-              Accordion Item #1
+              Analyze your text
             </button>
           </h2>
           <div
@@ -68,7 +71,7 @@ export default function About() {
               aria-expanded="false"
               aria-controls="collapseTwo"
             >
-              Accordion Item #2
+              Free to use
             </button>
           </h2>
           <div
@@ -99,7 +102,7 @@ export default function About() {
               aria-expanded="false"
               aria-controls="collapseThree"
             >
-              Accordion Item #3
+              Browser Compatible
             </button>
           </h2>
           <div
@@ -121,13 +124,13 @@ export default function About() {
         </div>
       </div>
       <div className="container">
-        <button
+        {/* <button
           onClick={ToggleStyle}
           type="button"
           className="btn btn-primary my-3"
         >
           {myBtn}
-        </button>
+        </button> */}
       </div>
     </div>
   );

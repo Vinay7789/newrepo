@@ -53,7 +53,8 @@ export default function Techform(props) {
   <button className="btn btn-primary my-3 mx-3" onClick={HandleCopy}>Copy </button>
 < div className="container my-5">
 <h1>Your text Summary</h1>
-<p>{text.split(" ").length} words  {text.length}</p>
+<p>{text.split(" ").filter((element)=>{
+  return element.length!=0}).length} words  {text.length}</p>
 <p>{0.008*text.split(" ").length }Minutes read</p>
 <h2>Preview</h2>
 <p>{text}</p>

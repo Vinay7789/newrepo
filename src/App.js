@@ -31,7 +31,7 @@ function App() {
 
   return (
     <>
-     <Navbar title="Navbar" aboutText="About" mode={mode} toggleMode={toggleMode} />
+     <Navbar title="Navbar" AboutMe="About" mode={mode} toggleMode={toggleMode} />
      <Alert alert = {alert}/>  
     {/* <BrowserRouter>
     
@@ -45,7 +45,7 @@ function App() {
       </div>
    </BrowserRouter>  */}
       <Techform showAlert={showAlert} heading="Enter the text to analyze" mode={mode}/>
-      {/* //<About alert={alert}/> */}
+<About  mode={mode}/>
     </>
   );
 }
