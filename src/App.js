@@ -17,7 +17,17 @@ function App() {
       setAlert(null);
     }, 5000);
   };
-  const toggleMode = () => {
+  const removeAllClasses=()=>{
+    document.body.classList.remove('bg-primary')
+    document.body.classList.remove('bg-success')
+    document.body.classList.remove('bg-warning')
+    document.body.classList.remove('bg-danger')
+  }
+
+  const toggleMode = (csl) => {
+    removeAllClasses()
+    console.log(csl)
+    document.body.classList.add('bg-' + csl)
     if (mode === "light") {
       setMode("dark");
       document.body.style.backgroundColor = "#042743";
